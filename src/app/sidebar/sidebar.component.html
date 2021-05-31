@@ -1,0 +1,20 @@
+<div class="container p-0">
+    <div class="row">
+        <div class="col-md-2">
+            <div data-component="sidebar">
+                <div class="sidebar">
+                    <ul class="list-group flex-column d-inline-block first-menu">
+                        <li class="list-group-item pl-3 py-2" *ngFor="let menu of sidebarMenu;let i = index">
+                            <a (click)="loadComponent(i)"><i class="fa fa-user-o" aria-hidden="true"><span
+                                        class="ml-2 align-middle">{{menu.menuName}}</span></i></a>
+                        </li> <!-- /.list-group-item -->        
+                    </ul> <!-- /.first-menu -->
+                </div> <!-- /.sidebar -->
+            </div>
+        </div>
+        <div class="col-md-10">
+            <ng-template adHost></ng-template>
+        </div>
+    </div>
+
+</div>
